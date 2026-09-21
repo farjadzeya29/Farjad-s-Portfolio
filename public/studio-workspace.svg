@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0eee9" />
+      <stop offset="65%" stop-color="#e3e0d8" />
+      <stop offset="100%" stop-color="#d4d0c6" />
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cfcbc1" />
+      <stop offset="100%" stop-color="#bab5a8" />
+    </linearGradient>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9975b" />
+      <stop offset="50%" stop-color="#b88344" />
+      <stop offset="100%" stop-color="#99642a" />
+    </linearGradient>
+    <filter id="studioShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="15" dy="25" stdDeviation="15" flood-color="#555146" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Wall Background -->
+  <rect width="500" height="520" fill="url(#wallGrad)" />
+  <!-- Floor -->
+  <rect y="520" width="500" height="130" fill="url(#floorGrad)" />
+  <line x1="0" y1="520" x2="500" y2="520" stroke="#b0aba0" stroke-width="1.5" />
+
+  <!-- Soft Ambient Window Light Beam -->
+  <polygon points="120,0 380,0 480,650 0,650" fill="#ffffff" opacity="0.18" />
+
+  <!-- Wall Art Frame 1 (Left - Sleek White Frame) -->
+  <g transform="translate(70, 70)" filter="url(#studioShadow)">
+    <rect width="140" height="190" fill="#f8f7f5" stroke="#d5d2c9" stroke-width="6" rx="2" />
+    <!-- Data / Architectural Print Inside -->
+    <rect x="20" y="20" width="100" height="150" fill="#ffffff" />
+    <line x1="35" y1="130" x2="105" y2="55" stroke="#10b981" stroke-width="2" opacity="0.75" />
+    <polyline points="35,130 55,100 75,115 105,55" fill="none" stroke="#059669" stroke-width="2.5" />
+    <circle cx="35" cy="130" r="3.5" fill="#059669" />
+    <circle cx="55" cy="100" r="3.5" fill="#059669" />
+    <circle cx="75" cy="115" r="3.5" fill="#059669" />
+    <circle cx="105" cy="55" r="3.5" fill="#10b981" />
+  </g>
+
+  <!-- Wall Art Frame 2 (Right - Minimalist Black Frame) -->
+  <g transform="translate(280, 100)" filter="url(#studioShadow)">
+    <rect width="130" height="180" fill="#ffffff" stroke="#1c1c1f" stroke-width="5" rx="1" />
+    <!-- Inner Matting & Minimal Grid -->
+    <rect x="18" y="18" width="94" height="144" fill="#faf9f6" />
+    <line x1="28" y1="70" x2="102" y2="70" stroke="#d0ccc2" stroke-width="1" stroke-dasharray="3,3" />
+    <line x1="28" y1="105" x2="102" y2="105" stroke="#d0ccc2" stroke-width="1" stroke-dasharray="3,3" />
+    <text x="65" y="95" font-family="serif" font-style="italic" font-size="20" fill="#2d2d30" text-anchor="middle">BI</text>
+  </g>
+
+  <!-- Designer Minimalist Wooden Chair -->
+  <g transform="translate(130, 310)" filter="url(#studioShadow)">
+    <!-- Back Curved Rest -->
+    <path d="M 20 60 C 20 20 120 20 120 60 C 120 90 20 90 20 60 Z" fill="url(#woodGrad)" />
+    <!-- Vertical Spindles -->
+    <line x1="45" y1="75" x2="45" y2="130" stroke="#7a4f21" stroke-width="3" />
+    <line x1="70" y1="75" x2="70" y2="130" stroke="#7a4f21" stroke-width="3" />
+    <line x1="95" y1="75" x2="95" y2="130" stroke="#7a4f21" stroke-width="3" />
+
+    <!-- Seat Cushion / Wooden Base -->
+    <ellipse cx="70" cy="140" rx="55" ry="18" fill="#24252a" />
+    <ellipse cx="70" cy="138" rx="53" ry="16" fill="#32353c" />
+
+    <!-- Chair Legs (Tapered) -->
+    <line x1="30" y1="145" x2="15" y2="280" stroke="#18191c" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="110" y1="145" x2="125" y2="280" stroke="#18191c" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="45" y1="145" x2="38" y2="265" stroke="#25272e" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="95" y1="145" x2="102" y2="265" stroke="#25272e" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Side Pedestal Table & Botanical Vase -->
+  <g transform="translate(340, 370)" filter="url(#studioShadow)">
+    <!-- Round Table Top -->
+    <ellipse cx="60" cy="90" rx="50" ry="12" fill="url(#woodGrad)" />
+    <!-- Table Legs (Tripod) -->
+    <line x1="35" y1="95" x2="20" y2="220" stroke="#18191c" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="85" y1="95" x2="100" y2="220" stroke="#18191c" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="60" y1="95" x2="60" y2="215" stroke="#282a30" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Ceramic Black Vase -->
+    <path d="M 52 88 C 45 75 42 55 50 40 L 70 40 C 78 55 75 75 68 88 Z" fill="#141518" />
+    <ellipse cx="60" cy="40" rx="10" ry="3" fill="#2d2f36" />
+
+    <!-- Delicate Botanical Stems -->
+    <path d="M 60 40 Q 55 15 45 -10" stroke="#8c8275" stroke-width="1.5" fill="none" />
+    <path d="M 60 40 Q 65 10 75 -20" stroke="#8c8275" stroke-width="1.5" fill="none" />
+    <path d="M 60 40 Q 60 15 58 -5" stroke="#8c8275" stroke-width="1.2" fill="none" />
+    <!-- Botanical Fluff / Dried Seedheads -->
+    <circle cx="45" cy="-10" r="5" fill="#d9d2c5" opacity="0.85" />
+    <circle cx="75" cy="-20" r="6" fill="#e0dacd" opacity="0.85" />
+    <circle cx="58" cy="-5" r="4.5" fill="#cfc8bc" opacity="0.85" />
+    <circle cx="50" cy="5" r="4" fill="#cfc8bc" opacity="0.7" />
+    <circle cx="68" cy="0" r="4" fill="#dfd8cb" opacity="0.7" />
+  </g>
+</svg>

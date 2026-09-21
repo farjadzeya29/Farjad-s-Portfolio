@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <!-- Background Terracotta Gradient -->
+    <linearGradient id="terracottaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a3f33" />
+      <stop offset="35%" stop-color="#7a3429" />
+      <stop offset="70%" stop-color="#692920" />
+      <stop offset="100%" stop-color="#552019" />
+    </linearGradient>
+
+    <!-- Wall Seam Texture -->
+    <pattern id="wallTexture" width="150" height="90" patternUnits="userSpaceOnUse">
+      <rect width="150" height="90" fill="none" stroke="#521f17" stroke-width="2" opacity="0.45" />
+      <line x1="0" y1="45" x2="150" y2="45" stroke="#481a13" stroke-width="1.5" opacity="0.4" />
+      <line x1="75" y1="0" x2="75" y2="45" stroke="#481a13" stroke-width="1.5" opacity="0.35" />
+      <line x1="0" y1="45" x2="0" y2="90" stroke="#481a13" stroke-width="1.5" opacity="0.35" />
+      <line x1="150" y1="45" x2="150" y2="90" stroke="#481a13" stroke-width="1.5" opacity="0.35" />
+    </pattern>
+
+    <!-- Ambient Shadow Filter -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="-10" dy="15" stdDeviation="25" flood-color="#2a0d08" flood-opacity="0.6" />
+    </filter>
+
+    <radialGradient id="flashGlow" cx="45%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ff9977" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#b54f3b" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.3" />
+    </radialGradient>
+
+    <!-- Suit Navy Gradient -->
+    <linearGradient id="suitNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#25324d" />
+      <stop offset="40%" stop-color="#1b2438" />
+      <stop offset="80%" stop-color="#141a29" />
+      <stop offset="100%" stop-color="#0e121d" />
+    </linearGradient>
+
+    <linearGradient id="suitLapel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c3a59" />
+      <stop offset="100%" stop-color="#161e30" />
+    </linearGradient>
+
+    <!-- Skin Tone Gradients -->
+    <linearGradient id="skinBase" x1="30%" y1="20%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#fedac2" />
+      <stop offset="40%" stop-color="#f5c4a6" />
+      <stop offset="75%" stop-color="#dfa585" />
+      <stop offset="100%" stop-color="#be8062" />
+    </linearGradient>
+
+    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d69372" />
+      <stop offset="100%" stop-color="#9d5b3d" />
+    </linearGradient>
+
+    <!-- Hair Tone Gradient -->
+    <linearGradient id="hairGrad" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#343236" />
+      <stop offset="35%" stop-color="#211f22" />
+      <stop offset="70%" stop-color="#141315" />
+      <stop offset="100%" stop-color="#090809" />
+    </linearGradient>
+  </defs>
+
+  <!-- Terracotta Wall Background -->
+  <rect width="600" height="750" fill="url(#terracottaGrad)" />
+  <rect width="600" height="750" fill="url(#wallTexture)" />
+  <rect width="600" height="750" fill="url(#flashGlow)" />
+
+  <!-- Soft Ambient Wall Shadow from Farjad -->
+  <path d="M 120 750 Q 150 480 230 350 Q 300 200 370 200 Q 450 200 480 380 Q 520 540 560 750 Z" 
+        fill="#260b06" opacity="0.45" filter="url(#softShadow)" />
+
+  <!-- ================= BODY / SUIT ================= -->
+  <!-- Dark Open-Collar Shirt Base -->
+  <path d="M 230 460 L 370 460 L 400 750 L 200 750 Z" fill="#0d0f12" />
+  
+  <!-- Neck / Throat -->
+  <path d="M 255 350 L 345 350 L 340 450 Q 300 480 260 450 Z" fill="url(#skinShadow)" />
+  <path d="M 265 350 L 335 350 L 330 435 Q 300 460 270 435 Z" fill="url(#skinBase)" />
+  <!-- Chest V exposure -->
+  <path d="M 282 430 L 318 430 L 308 520 L 292 520 Z" fill="url(#skinShadow)" />
+  <path d="M 285 430 L 315 430 L 305 500 L 295 500 Z" fill="url(#skinBase)" />
+
+  <!-- Black Shirt Collars (Open Style) -->
+  <path d="M 255 425 L 290 515 L 265 490 L 245 440 Z" fill="#181a1f" stroke="#2a2d36" stroke-width="1.5" />
+  <path d="M 345 425 L 310 515 L 335 490 L 355 440 Z" fill="#15171c" stroke="#2a2d36" stroke-width="1.5" />
+  
+  <!-- Shirt Placket & Buttons -->
+  <line x1="300" y1="520" x2="300" y2="750" stroke="#1c1f26" stroke-width="20" />
+  <circle cx="300" cy="555" r="4" fill="#383d47" stroke="#000" stroke-width="1" />
+  <circle cx="300" cy="635" r="4" fill="#383d47" stroke="#000" stroke-width="1" />
+  <circle cx="300" cy="715" r="4" fill="#383d47" stroke="#000" stroke-width="1" />
+
+  <!-- Navy Suit Jacket Shoulders -->
+  <!-- Left Shoulder -->
+  <path d="M 245 430 C 190 445 110 495 50 560 C 25 590 0 650 0 750 L 225 750 L 250 510 Z" 
+        fill="url(#suitNavy)" />
+  <!-- Right Shoulder -->
+  <path d="M 355 430 C 410 445 490 495 550 560 C 575 590 600 650 600 750 L 375 750 L 350 510 Z" 
+        fill="url(#suitNavy)" />
+
+  <!-- Left Lapel -->
+  <path d="M 245 430 L 210 570 L 255 690 L 285 530 Z" fill="url(#suitLapel)" stroke="#1a2233" stroke-width="1.5" />
+  <!-- Right Lapel -->
+  <path d="M 355 430 L 390 570 L 345 690 L 315 530 Z" fill="url(#suitLapel)" stroke="#1a2233" stroke-width="1.5" />
+
+  <!-- Lapel Notch & Button Holes -->
+  <line x1="225" y1="510" x2="245" y2="520" stroke="#0f1522" stroke-width="2" />
+  <line x1="375" y1="510" x2="355" y2="520" stroke="#0f1522" stroke-width="2" />
+
+  <!-- ================= HEAD / FACE ================= -->
+  <!-- Head Base Outline -->
+  <g id="headGroup">
+    <!-- Ears -->
+    <!-- Left Ear -->
+    <path d="M 222 250 C 210 250 205 285 220 305 C 225 315 235 320 238 310 Z" fill="url(#skinShadow)" />
+    <!-- Right Ear -->
+    <path d="M 378 250 C 390 250 395 285 380 305 C 375 315 365 320 362 310 Z" fill="url(#skinShadow)" />
+    <path d="M 375 255 C 385 255 388 280 378 295 Z" fill="url(#skinBase)" />
+
+    <!-- Face Shape (Jawline & Cheekbones) -->
+    <path d="M 230 220 C 220 290 230 360 260 388 C 280 405 320 405 340 388 C 370 360 380 290 370 220 C 350 160 250 160 230 220 Z" 
+          fill="url(#skinBase)" />
+
+    <!-- Cheeks & Contour Shading -->
+    <path d="M 232 260 C 225 320 240 365 265 385 L 255 390 C 225 365 215 310 225 250 Z" 
+          fill="url(#skinShadow)" opacity="0.6" />
+    <path d="M 368 260 C 375 320 360 365 335 385 L 345 390 C 375 365 385 310 375 250 Z" 
+          fill="url(#skinShadow)" opacity="0.4" />
+
+    <!-- Forehead Highlight -->
+    <ellipse cx="295" cy="210" rx="35" ry="25" fill="#fff0e6" opacity="0.45" />
+
+    <!-- Nose -->
+    <path d="M 296 220 L 292 285 L 282 295 L 305 295 L 302 285 Z" fill="url(#skinShadow)" opacity="0.5" />
+    <path d="M 298 220 L 296 280 L 303 280 Z" fill="#ffece0" opacity="0.7" />
+    <!-- Nostrils -->
+    <ellipse cx="288" cy="294" rx="4" ry="2.5" fill="#442115" />
+    <ellipse cx="306" cy="294" rx="4" ry="2.5" fill="#442115" />
+
+    <!-- Eyes & Eyebrows -->
+    <!-- Eyebrows (Neat, masculine, defined) -->
+    <path d="M 250 216 Q 270 205 288 214 Q 270 210 250 216 Z" fill="#1b181a" />
+    <path d="M 312 214 Q 330 205 350 216 Q 330 210 312 214 Z" fill="#1b181a" />
+
+    <!-- Left Eye (Looking confident slightly left) -->
+    <path d="M 255 232 Q 270 224 285 232 Q 270 240 255 232 Z" fill="#ffffff" />
+    <circle cx="270" cy="232" r="5.5" fill="#321b10" />
+    <circle cx="269" cy="231" r="2.5" fill="#080503" />
+    <circle cx="268" cy="230" r="1" fill="#ffffff" />
+    <path d="M 253 230 Q 270 222 287 230" stroke="#1c1613" stroke-width="2" fill="none" />
+
+    <!-- Right Eye -->
+    <path d="M 315 232 Q 330 224 345 232 Q 330 240 315 232 Z" fill="#ffffff" />
+    <circle cx="328" cy="232" r="5.5" fill="#321b10" />
+    <circle cx="327" cy="231" r="2.5" fill="#080503" />
+    <circle cx="326" cy="230" r="1" fill="#ffffff" />
+    <path d="M 313 230 Q 330 222 347 230" stroke="#1c1613" stroke-width="2" fill="none" />
+
+    <!-- Lips -->
+    <path d="M 284 330 Q 300 326 316 330 Q 300 338 284 330 Z" fill="#b06450" />
+    <line x1="284" y1="330" x2="316" y2="330" stroke="#5a2217" stroke-width="1.5" />
+
+    <!-- ================= BEARD & MUSTACHE ================= -->
+    <!-- Groomed Beard Outline matching WhatsApp Image 2 -->
+    <!-- Mustache -->
+    <path d="M 280 315 Q 300 318 320 315 Q 300 326 280 315 Z" fill="#1c1a1e" opacity="0.92" />
+    
+    <!-- Chin & Jawline Beard -->
+    <path d="M 230 270 
+             C 225 320 235 365 260 395 
+             C 280 412 320 412 340 395 
+             C 365 365 375 320 370 270 
+             L 362 275 
+             C 365 315 355 355 335 380 
+             C 318 395 282 395 265 380 
+             C 245 355 235 315 238 275 Z" 
+          fill="#181619" opacity="0.95" />
+    
+    <!-- Soul Patch / Chin Underlip -->
+    <path d="M 293 336 L 307 336 L 303 358 L 297 358 Z" fill="#181619" opacity="0.9" />
+
+    <!-- ================= HAIR (WAVY VOLUME ON TOP) ================= -->
+    <!-- Voluminous dark curly hair as seen in photo -->
+    <path d="M 220 230 
+             C 205 180 215 130 260 110 
+             C 290 95 330 95 365 115 
+             C 400 135 405 185 385 235 
+             C 390 220 380 180 360 150 
+             C 340 125 300 120 270 130 
+             C 240 145 225 180 220 230 Z" 
+          fill="url(#hairGrad)" />
+
+    <!-- Hair Texture Waves & Curls -->
+    <path d="M 235 180 Q 250 140 280 135 Q 310 130 335 145 Q 365 160 375 200" 
+          stroke="#3b373e" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.6" />
+    <path d="M 255 150 Q 285 125 320 125 Q 350 130 365 160" 
+          stroke="#4a4650" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.5" />
+    <path d="M 230 195 Q 240 160 265 155 Q 295 150 315 165" 
+          stroke="#2f2c32" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.7" />
+    <!-- Natural side curls -->
+    <path d="M 215 210 Q 225 225 220 245" stroke="#1d1b1f" stroke-width="6" stroke-linecap="round" fill="none" />
+    <path d="M 380 210 Q 375 225 380 245" stroke="#1d1b1f" stroke-width="6" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Editorial Vignette & Grading -->
+  <rect width="600" height="750" fill="none" stroke="#2b110b" stroke-width="8" opacity="0.25" />
+</svg>
